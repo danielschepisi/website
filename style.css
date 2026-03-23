@@ -1,35 +1,36 @@
 nav {
-  width: 100%;
-  padding: 20px 0;
-  background-color: transparent;
-  /* Or choose a color */
+  position: fixed;
+  /* This "pins" it to the screen */
+  top: 0;
+  /* Stick to the very top */
+  right: 0;
+  /* Stick to the very right */
+  padding: 20px 40px;
+  /* Space from the edges */
+  z-index: 1000;
+  /* Keeps it on top of the video and other content */
 }
 
 .nav-links {
   display: flex;
-  justify-content: center;
-  /* Centers the words in the middle of the screen */
   list-style: none;
-  /* Removes the bullet points */
   margin: 0;
   padding: 0;
   gap: 30px;
-  /* Adds space between the words */
+  /* Space between Home, About, Resume */
 }
 
 .nav-links a {
   text-decoration: none;
-  /* Removes the underline */
   color: #333;
-  /* Change to your preferred text color */
-  font-weight: bold;
-  transition: color 0.3s;
-  /* Makes the hover effect smooth */
+  font-weight: 600;
+  font-family: sans-serif;
+  transition: opacity 0.3s;
 }
 
 .nav-links a:hover {
-  color: #0070f3;
-  /* Changes color when you mouse over it */
+  opacity: 0.6;
+  /* Simple fade effect on hover */
 }
 
 .active {
