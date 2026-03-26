@@ -10,8 +10,8 @@ themeButton.addEventListener('click', () => {
 
   // 4. Logic: Change the button text based on the current mode
   if (bodyElement.classList.contains('dark-theme')) {
-    themeButton.textContent = "Light Mode";
+    themeButton.textContent = "Light";
   } else {
-    themeButton.textContent = "Dark Mode";
+    themeButton.textContent = "Dark";
   }
 });
