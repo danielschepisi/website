@@ -128,16 +128,16 @@ body {
   max-width: 800px;
 
   height: auto;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 20px auto;
-  padding: 0 20px;
+  padding: 0;
 }
 
 video {
   border-radius: 8px;
-  /* Smooths the corners */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  /* Adds a subtle depth */
 }
 
 /* Normal Styles */
@@ -157,4 +157,13 @@ body.dark-theme {
 body.dark-theme a {
   color: #38dcc8;
   /* Make links readable on dark background */
+}
+
+body.dark-theme nav {
+  background-color: #1a1a1a;
+}
+
+body.dark-theme video {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  /* Stronger shadow for dark mode */
 }
