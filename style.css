@@ -157,14 +157,14 @@ body {
 .video-container {
   aspect-ratio: 16 / 9;
   width: 100%;
-  max-width: 800px;
+  /* max-width: 800px; */
 
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 20px auto;
-  padding: 0;
+  /* padding: 0; */
 }
 
 video {
@@ -226,8 +226,7 @@ h2 {
   align-self: flex-start;
   /* Use this if the parent is still a Flexbox */
 
-  /* 2. Create the 30px gap from the left wall */
-  margin-left: 10vw;
+  margin-left: 10px;
 
   /* 3. Spacing from other elements */
   margin-top: 100px;
