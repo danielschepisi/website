@@ -6,7 +6,8 @@ nav {
   z-index: 1000;
 
   padding: 10px 40px;
-  background-color: #38dcc8;
+  background-color: #000;
+  /* #38dcc8; */
 
   box-sizing: border-box;
   display: flex;
@@ -102,7 +103,8 @@ body {
 body {
   font-size: 18px;
   padding: 20px;
-  background-color: #38dcc8;
+  background-color: #000;
+  /* #38dcc8; */
   color: #333;
   transition: background-color 0.5s, color 0.5s;
   /* Smooth fade! */
@@ -114,7 +116,7 @@ body {
   align-items: center;
   gap: 40px;
 
-  background-color: #333;
+  background-color: #000;
   padding: 0;
   margin-top: 1px;
   width: 100vw;
@@ -200,7 +202,7 @@ body.dark-theme video {
 }
 
 .name-box h1 {
-  color: white;
+  color: rgb(233, 232, 232);
   text-align: left;
   line-height: 1;
   /* Pulls the two words closer together */
@@ -214,4 +216,22 @@ body.dark-theme video {
 body.dark-theme .hero-section {
   background-color: #000;
   /* Pitch black for the hero in dark mode */
+}
+
+h2 {
+  /* 1. Stop the centering */
+  text-align: left;
+  align-self: flex-start;
+  /* Use this if the parent is still a Flexbox */
+
+  /* 2. Create the 30px gap from the left wall */
+  margin-left: 10vw;
+
+  /* 3. Spacing from other elements */
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+  /* Optional: Matching your style */
+  font-family: 'Helvetica', sans-serif;
+  color: #333;
 }
