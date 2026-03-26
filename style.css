@@ -123,10 +123,13 @@ body {
 }
 
 .video-container {
+  aspect-ratio: 16 / 9;
+  width: 100%;
   max-width: 800px;
-  /* Prevents the video from being giant on big monitors */
-  margin: 40px auto;
-  /* Centers the container */
+
+  height: auto;
+  display: block;
+  margin: 20px auto;
   padding: 0 20px;
 }
 
