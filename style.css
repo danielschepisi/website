@@ -90,6 +90,7 @@ nav {
 }
 
 body {
+  margin: 0;
   font-family: 'Helvetica', sans-serif;
   background-color: #38dcc8;
   color: #333;
@@ -97,6 +98,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 /* Tablet and Desktop Styles (Default) */
@@ -234,4 +236,15 @@ h2 {
   /* Optional: Matching your style */
   font-family: 'Helvetica', sans-serif;
   color: #333;
+}
+
+main {
+  flex: 1;
+  /* This tells the main section to expand and push the footer down */
+}
+
+footer {
+  width: 100%;
+  padding: 20px 0;
+  text-align: right;
 }
