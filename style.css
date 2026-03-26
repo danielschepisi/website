@@ -101,23 +101,52 @@ body {
 /* Tablet and Desktop Styles (Default) */
 body {
   font-size: 18px;
-  padding: 50px;
+  padding: 20px;
+  background-color: #38dcc8;
+  color: #333;
+  transition: background-color 0.5s, color 0.5s;
+  /* Smooth fade! */
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+
+  background-color: #333;
+  padding: 0;
+  margin-top: 1px;
+  width: 100vw;
+  height: clamp(100px, 40vw, 5000px);
 }
 
 /* Mobile Styles */
 @media (max-width: 600px) {
   body {
     font-size: 16px;
-    /* Smaller text for smaller screens */
     padding: 20px;
-    /* Less whitespace on the sides */
     background-color: lightblue;
-    /* Temporary color to test if it works! */
   }
 
   h1 {
     text-align: center;
-    /* Center the title on mobile */
+  }
+
+  .hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px;
+
+    background-color: #333;
+    /* Your grey background */
+    padding: 0;
+    /* Vertical and horizontal breathing room */
+    margin-top: 1px;
+    /* Pushes it down so it's not hidden by your NAV */
+    width: 100vw;
+    height: 30vh;
   }
 }
 
@@ -140,12 +169,7 @@ video {
 }
 
 /* Normal Styles */
-body {
-  background-color: #38dcc8;
-  color: #333;
-  transition: background-color 0.5s, color 0.5s;
-  /* Smooth fade! */
-}
+
 
 /* Dark Mode Styles */
 body.dark-theme {
@@ -165,4 +189,29 @@ body.dark-theme nav {
 body.dark-theme video {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   /* Stronger shadow for dark mode */
+}
+
+
+
+.profile-pic {
+  height: 100%;
+  object-fit: contain;
+
+}
+
+.name-box h1 {
+  color: white;
+  text-align: left;
+  line-height: 1;
+  /* Pulls the two words closer together */
+  margin: 0;
+  /* font-size: 2.5rem; */
+  font-size: clamp(2rem, 5vw, 5rem);
+  text-transform: uppercase;
+  /* Optional: gives it a bold, modern look */
+}
+
+body.dark-theme .hero-section {
+  background-color: #000;
+  /* Pitch black for the hero in dark mode */
 }
