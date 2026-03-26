@@ -138,7 +138,7 @@ video {
 
 /* Normal Styles */
 body {
-  background-color: white;
+  background-color: #38dcc8;
   color: #333;
   transition: background-color 0.5s, color 0.5s;
   /* Smooth fade! */
@@ -147,10 +147,10 @@ body {
 /* Dark Mode Styles */
 body.dark-theme {
   background-color: #1a1a1a;
-  color: #f0f0f0;
+  color: #38dcc8;
 }
 
 body.dark-theme a {
-  color: #4da6ff;
+  color: #38dcc8;
   /* Make links readable on dark background */
 }
