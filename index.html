@@ -9,34 +9,79 @@
 <body>
   <nav>
     <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#reel-section">Reel</a></li>
+      <li><a href="#resume-section">Resume</a></li>
+      <!-- <li><a href="#media">Media</a></li> -->
+
+
+        <!-- <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="resume.html">Resume</a></li>
-        <li><a href="media.html">Media</a></li>
+        <li><a href="media.html">Media</a></li> -->
         <!-- <button id="theme-button">Dark</button> -->
     </ul>
   </nav>
+
   <main>
-  <!-- <header class="hero-section">
-    <img src="assets/headshot.png" alt="Daniel Acting" class="profile-pic">
-    <div class="name-box">
-      <h1>Daniel<br>Schepisi</h1>
-    </div>
-    <img src="assets/newyork.jpg" alt="Daniel Tech" class="profile-pic">
-  </header> -->
+  <header id="hero" class="hero-section">
+  <div class="name-box">
+    <h1>Daniel<br>Schepisi</h1>
+  </div>
+  <img src="assets/headshot.png" alt="Daniel Acting" class="profile-pic">
+  <img src="assets/newyork.jpg" alt="Daniel Tech" class="profile-pic">
+</header>
+
+
   <h2>Showreel</h2>
-
-
-  <section class="video-container">
+  <section id="reel-section" class="video-container">
     <video width="100%" controls poster="assets/video-thumbnail.png">
       <source src="assets/showreel.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </section>
-  </main>
+
+  <h2>My Resume</h2>
+  <section id="resume-section" class="resume-container">
+    <div class="pdf-preview">
+        <embed src="assets/resume.pdf" type="application/pdf" width="100%" height="600px" />
+    </div>
+
+    <a href="assets/resume.pdf" download="Daniel_Resume.pdf" class="download-btn">
+        Download as PDF
+    </a>
+  </section>
+</main>
+
 <footer>
     <p>© 2026 Daniel Schepisi</p>
 </footer>
 <script src="script.js"></script>
+<script>
+  const sections = document.querySelectorAll("section, header, div[id]");
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  const observerOptions = {
+    root: null,
+    threshold: 0.8, // 60% of the section must be visible to trigger
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Remove 'active' from all links
+        navLinks.forEach((link) => link.classList.remove("active"));
+        
+        // Find the link that matches the current section's ID
+        const activeLink = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+        if (activeLink) {
+          activeLink.classList.add("active");
+        }
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach((section) => observer.observe(section));
+</script>
 </body>
 </html>
