@@ -157,7 +157,7 @@ body {
 .video-container {
   aspect-ratio: 16 / 9;
   width: 100%;
-  /* max-width: 800px; */
+  max-width: 80vw;
 
   height: auto;
   display: flex;
