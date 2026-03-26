@@ -1,14 +1,16 @@
 nav {
   position: fixed;
-  /* This "pins" it to the screen */
   top: 0;
-  /* Stick to the very top */
-  right: 0;
-  /* Stick to the very right */
-  padding: 20px 40px;
-  /* Space from the edges */
+  left: 0;
+  width: 100%;
   z-index: 1000;
-  /* Keeps it on top of the video and other content */
+
+  padding: 10px 40px;
+  background-color: #38dcc8;
+
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .nav-links {
@@ -17,7 +19,6 @@ nav {
   margin: 0;
   padding: 0;
   gap: 30px;
-  /* Space between Home, About, Resume */
 }
 
 .nav-links a {
