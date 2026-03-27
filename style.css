@@ -251,6 +251,7 @@ footer {
 html {
   /* This makes the jump feel like a smooth glide */
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 section {
