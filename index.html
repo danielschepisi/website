@@ -1,96 +1,67 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <nav>
-    <ul class="nav-links">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#reel-section">Reel</a></li>
-      <li><a href="#resume-section">Resume</a></li>
-      <!-- <li><a href="#media">Media</a></li> -->
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Daniel Schepisi acting</title>
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- <nav>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#reel-section">Reel</a></li>
+        <li><a href="#resume-section">Resume</a></li>
+        <li><a href="#media">Media</a></li>
 
 
-        <!-- <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="resume.html">Resume</a></li>
-        <li><a href="media.html">Media</a></li> -->
-        <!-- <button id="theme-button">Dark</button> -->
-    </ul>
-  </nav>
+        <li><a href="media.html">Media</a></li> 
+        <button id="theme-button">Dark</button>
+      </ul>
+    </nav> -->
+    <main>
+      <h1 class="name-box"> 
+          Daniel <span>Schepisi</span>
+      </h1>
 
-  <main>
-  <header id="hero" class="hero-section">
-  <div class="name-box">
-    <h1>Daniel<br>Schepisi</h1>
-  </div>
-  <img src="assets/headshot.png" alt="Daniel Acting" class="profile-pic">
-  <img src="assets/newyork.jpg" alt="Daniel Tech" class="profile-pic">
-</header>
+      <h2>Showreel</h2>
+      <section class="video-section">
+        <video width="100%" controls poster="assets/video-thumbnail.png">
+          <source src="assets/showreel.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </section>
 
+      <h2>Contact</h2>
+        <ul class="contact-list">
+  <li><strong>Agent:</strong> <a href="https://www.dacostatalent.com" target="_blank" rel="noopener">Cat MacFarlane</a>, <a href="mailto:toronto@dacostatalent.com?subject=Inquiry%20to%20Cat%20for%20Daniel%20Schepisi">toronto@dacostatalent.com</a></li>
+  <li><strong>Direct Email:</strong> <a href="mailto:danielschepisicanada@gmail.com">danielschepisicanada@gmail.com</a></li>
+  <li><strong>Phone:</strong> <a href="tel:+19423814466">+1 (942) 381-4466</a></li>
+  <li><strong>Instagram:</strong> <a href="https://instagram.com/danielschepisi" target="_blank" rel="noopener">@danielschepisi</a></li>
+  <li><strong>IMDb:</strong> <a href="https://www.imdb.com/name/yourid/" target="_blank" rel="noopener">Daniel Schepisi on IMDb</a></li>
+</ul>
 
-  <h2>Showreel</h2>
-  <section id="reel-section" class="video-container">
-    <video width="100%" controls poster="assets/video-thumbnail.png">
-      <source src="assets/showreel.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </section>
+      <!-- <h2>My Resume</h2>
+      <section id="resume-section" class="resume-container">
+        <div class="pdf-frame-wrapper">
+        <object data="assets/resume.pdf" type="application/pdf" width="100%" height="800px">
+                <p>Your browser doesn't support PDF viewing. 
+                  <a href="assets/resume.pdf">Download it here instead.</a>
+                </p>
+            </object>
+        
+        </div> 
+        <a href="assets/resume.pdf" download="Daniel_Resume.pdf" class="download-btn">
+            Download as PDF
+        </a> 
+       </section> -->
+    </main> 
 
-  <h2>My Resume</h2>
-  <section id="resume-section" class="resume-container">
-    <div class="pdf-frame-wrapper">
-     <object data="assets/resume.pdf" type="application/pdf" width="100%" height="800px">
-            <p>Your browser doesn't support PDF viewing. 
-               <a href="assets/resume.pdf">Download it here instead.</a>
-            </p>
-        </object>
-    
-    </div>
-
-    <!-- <a href="assets/resume.pdf" download="Daniel_Resume.pdf" class="download-btn">
-        Download as PDF
-    </a> -->
-  </section>
-</main> 
-
-<footer>
-    <p>© 2026 Daniel Schepisi</p>
-</footer>
-<script src="script.js"></script>
-<script>
-  const navLinks = document.querySelectorAll(".nav-links a");
-
-  window.addEventListener("scroll", () => {
-    let current = "";
-    const sections = document.querySelectorAll("header[id], section[id]");
-    const scrollY = window.pageYOffset;
-
-    // 1. Hard-coded "Home" trigger for the very top of the page
-    if (scrollY < 100) {
-      current = "hero";
-    } else {
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 300; // Adjust for your Nav height
-        if (scrollY >= sectionTop) {
-          current = section.getAttribute("id");
-        }
-      });
-    }
-
-    // 2. Update the links
-    navLinks.forEach((link) => {
-      link.classList.remove("active");
-      // Check if the link's href matches the current ID
-      if (link.getAttribute("href") === `#${current}`) {
-        link.classList.add("active");
-      }
-    });
-  });
-</script>
-</body>
+    <footer>
+        <p>© 2026 Daniel Schepisi</p>
+    </footer>
+  </body>
 </html>

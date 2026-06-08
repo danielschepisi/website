@@ -1,4 +1,121 @@
-nav {
+body {
+  font-size: 16px;
+  padding: 0px;
+  margin: 0;
+  font-family: 'Helvetica', sans-serif;
+  /* background-color: #38dcc8; */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  min-height: 100vh;
+  background-color: #000;
+  color: #333;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 20px 1rem;
+  box-sizing: border-box;
+}
+
+.name-box {
+  color: rgb(195, 195, 196);
+  /* text-align: center; */
+  margin: 0 0 20px 0;
+  font-size: clamp(2rem, 10vw, 5rem);
+  text-transform: uppercase;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 0.3em;
+}
+
+.video-section {
+  /* aspect-ratio: 16 / 9; */
+  width: 100%;
+  margin: 20px 0;
+}
+
+video {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  text-align: left;
+  margin: 20px 0 10px -5vw;
+  /* font-family: 'Helvetica', sans-serif; */
+  color: #3f3f3f;
+}
+
+footer {
+  font-size: 10px;
+  width: 100%;
+  padding: 20px 0;
+  text-align: right;
+  box-sizing: border-box;
+}
+
+.contact-list {
+  list-style: none;
+  /* Removes the default bullet points */
+  padding: 0;
+  /* Removes default browser indentation */
+  margin: 15px 0 40px 0;
+  /* Gives space above, and breathing room below before the footer */
+}
+
+.contact-list li {
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
+  line-height: 1.8;
+  /* Adds comfortable vertical spacing between rows */
+  color: #ccc;
+  /* Light gray text to look sharp on your black background */
+}
+
+.contact-list strong {
+  color: rgb(195, 195, 196);
+  /* Makes labels stand out slightly */
+}
+
+.contact-list a {
+  color: #38dcc8;
+  /* A nice highlight color for links; change this to whatever you like! */
+  text-decoration: none;
+  /* Removes the default harsh underline */
+  transition: color 0.2s ease;
+}
+
+/* Adds a subtle hover effect for interactive elements */
+.contact-list a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* Mobile Styles*/
+@media (max-width: 450px) {
+  main {
+    max-width: 90vw;
+  }
+
+  .name-box {
+    grid-auto-flow: row;
+    grid-template-columns: max-content;
+    justify-content: center;
+    text-align: center;
+    gap: 0;
+  }
+}
+
+
+/* nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -7,39 +124,38 @@ nav {
 
   padding: 10px 40px;
   background-color: #000;
-  /* #38dcc8; */
+  //#38dcc8;
 
   box-sizing: border-box;
   display: flex;
   justify-content: flex-end;
-}
+} */
 
-.nav-links {
+/* .nav-links {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
   gap: 30px;
-}
+} */
 
-.nav-links a {
+/* .nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 600;
   font-family: sans-serif;
   transition: opacity 0.3s;
-}
+} */
 
-.nav-links a:hover {
+/* .nav-links a:hover {
   opacity: 0.6;
-  /* Simple fade effect on hover */
-}
+} */
 
-.active {
+/* .active {
   border-bottom: 2px solid #333;
-}
+} */
 
-.download-btn {
+/* .download-btn {
   display: inline-block;
   background-color: #0070f3;
   color: white;
@@ -48,22 +164,21 @@ nav {
   text-decoration: none;
   margin-top: 20px;
   font-weight: bold;
-}
+} */
 
-.download-btn:hover {
+/* .download-btn:hover {
   background-color: #0051af;
-}
+} */
 
-.resume-view {
+/* .resume-view {
   width: 100%;
   display: flex;
   justify-content: center;
   padding-top: 100px;
-  /* This creates space so the fixed navbar doesn't cover your title */
   padding-bottom: 50px;
-}
+} */
 
-.resume-container {
+/* .resume-container {
   width: 80%;
   max-width: 900px;
   margin: 40px auto;
@@ -71,202 +186,56 @@ nav {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-}
+} */
 
-.pdf-preview {
+/* .pdf-preview {
   width: 100%;
   height: 80vh;
-  /* This makes the preview 80% of the screen height */
   border: 1px solid #ccc;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
-  /* Keeps the corners tidy */
-}
+} */
 
 /* Ensure the embed fills its container */
-.pdf-preview embed {
+/* .pdf-preview embed {
   width: 100%;
   height: 100%;
-}
-
-body {
-  margin: 0;
-  font-family: 'Helvetica', sans-serif;
-  background-color: #38dcc8;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-/* Tablet and Desktop Styles (Default) */
-body {
-  font-size: 18px;
-  padding: 20px;
-  background-color: #000;
-  /* #38dcc8; */
-  color: #333;
-  transition: background-color 0.5s, color 0.5s;
-  /* Smooth fade! */
-}
-
-.hero-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-
-  background-color: #000;
-  padding: 0;
-  margin-top: 1px;
-  width: 100vw;
-  height: clamp(100px, 40vw, 300px);
-}
-
-/* Mobile Styles */
-@media (max-width: 600px) {
-  body {
-    font-size: 16px;
-    padding: 20px;
-    background-color: lightblue;
-  }
-
-  h1 {
-    text-align: center;
-  }
-
-  .hero-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0px;
-
-    background-color: #333;
-    /* Your grey background */
-    padding: 0;
-    /* Vertical and horizontal breathing room */
-    margin-top: 1px;
-    /* Pushes it down so it's not hidden by your NAV */
-    width: 100vw;
-    height: 30vh;
-  }
-}
-
-.video-container {
-  aspect-ratio: 16 / 9;
-  width: 100%;
-  max-width: 80vw;
-
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px auto;
-  /* padding: 0; */
-}
-
-video {
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Normal Styles */
-
+} */
 
 /* Dark Mode Styles */
-body.dark-theme {
+/* body.dark-theme {
   background-color: #1a1a1a;
   color: #38dcc8;
-}
+} */
 
-body.dark-theme a {
+/* body.dark-theme a {
   color: #38dcc8;
-  /* Make links readable on dark background */
-}
+} */
 
-body.dark-theme nav {
+/* body.dark-theme nav {
   background-color: #1a1a1a;
-}
+} */
 
-body.dark-theme video {
+/* body.dark-theme video {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  /* Stronger shadow for dark mode */
-}
+} */
 
-
-
-.profile-pic {
+/* .profile-pic {
   height: 50%;
   object-fit: contain;
+} */
 
-}
-
-.name-box h1 {
-  color: rgb(233, 232, 232);
-  text-align: left;
-  line-height: 1;
-  /* Pulls the two words closer together */
-  margin: 0;
-  /* font-size: 2.5rem; */
-  font-size: clamp(2rem, 5vw, 5rem);
-  text-transform: uppercase;
-  /* Optional: gives it a bold, modern look */
-}
-
-body.dark-theme .hero-section {
+/* body.dark-theme .hero-section {
   background-color: #000;
-  /* Pitch black for the hero in dark mode */
-}
+} */
 
-h2 {
-  /* 1. Stop the centering */
-  text-align: left;
-  align-self: flex-start;
-  /* Use this if the parent is still a Flexbox */
-
-  margin-left: 10px;
-
-  /* 3. Spacing from other elements */
-  margin-top: 100px;
-  margin-bottom: 10px;
-
-  /* Optional: Matching your style */
-  font-family: 'Helvetica', sans-serif;
-  color: #333;
-}
-
-main {
-  flex: 1;
-  /* This tells the main section to expand and push the footer down */
-}
-
-footer {
-  width: 100%;
-  padding: 20px 0;
-  text-align: right;
-}
-
-html {
-  /* This makes the jump feel like a smooth glide */
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
-}
-
-section {
-  /* This prevents the fixed Nav bar from covering your headers 
-     when you jump to them. Adjust the 80px to match your nav height. */
-  scroll-margin-top: 80px;
-}
-
-.nav-links a.active {
+/* .nav-links a.active {
   border-bottom: 2px solid #333;
   opacity: 1;
-}
+} */
 
 /* If you're in dark mode, swap the underline color */
-body.dark-theme .nav-links a.active {
+/* body.dark-theme .nav-links a.active {
   border-bottom: 2px solid #38dcc8;
-}
+} */
