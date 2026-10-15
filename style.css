@@ -58,6 +58,21 @@ main {
   margin: 20px 0;
 }
 
+/* --- Secondary Video Grid Section --- */
+.video-grid-section {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.video-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 equal columns */
+  gap: 20px;
+  /* Space between videos */
+  width: 100%;
+}
+
 video {
   width: 100%;
   border-radius: 8px;
@@ -116,7 +131,14 @@ footer {
   color: #fff;
 }
 
-/* Mobile Styles*/
+/* Mobile & Tablet Styles */
+@media (max-width: 768px) {
+  .video-row {
+    grid-template-columns: 1fr;
+    /* Stack vertically on smaller screens */
+  }
+}
+
 @media (max-width: 450px) {
   main {
     max-width: 90vw;
@@ -130,7 +152,6 @@ footer {
     gap: 0;
   }
 }
-
 
 /* nav {
   position: fixed;
